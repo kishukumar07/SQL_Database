@@ -73,3 +73,52 @@ DELETE FROM customers WHERE id = 1;
 -- Sorting
 SELECT name, email FROM customers ORDER BY name ASC;
 SELECT name, email FROM customers ORDER BY email DESC;
+
+
+
+show databases; 
+use testdb ;
+show tables ; 
+
+select name ,email from customers; 
+
+select * from users ; 
+insert into users(email,name) 
+values("dfd@gmail.com","nurupul"); 
+
+-- filtering 
+select name from users where email  ="work@gmail.com";
+-- see those rows where first 2 letter are name of first two leter are nr .
+
+select name , email from users  where name = "disHA";  
+select name , email from users  where name like  "dis%"; 
+select name , email from users  where name like  "%is%"; 
+
+
+select * from customers;
+ 
+ -- update
+ 
+UPDATE customers
+SET name = 'niket'
+WHERE age = 22;
+-- safe mode no update please  untill primery key 
+select email from customers where name ="niket" ; 
+     
+delete from customers where age =22;   -- nahhh without primery key not able to delete
+
+
+select * from users;
+
+update users 
+   set name ="ansh" 
+    where id=3 ; 
+    
+
+delete from users where id = 4 ; 
+
+select name  from users where id = 5 or email = "" ; 
+select name  from users where id < 5 ; 
+select name  from users where id = 5  ; 
+
+
