@@ -6,6 +6,7 @@ select * from Students
 INNER JOIN Courses ON 
 Students.courseID = Courses.id;
 
+
 -- Left 
 select * from Students Left JOIN Courses ON  Students.courseID = Courses.id;
 
