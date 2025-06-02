@@ -10,21 +10,22 @@ app.use(express.json());
 app.get("/api/students", async (req, res) => {
   try {
     courses.hasMany(students, { foreignkey: "courseID" });
-    students.belongsTo(courses, { foreignkey: "courseID" });
+    students.belongsTo(courses, { foreignkey: "courseID" });     
     const data = await students.findAll({
       include: [courses],
-    });
+    });                                         //join and read wala part ... 
     res.status(200).json({
       isError: false,
       data,
     });
-  } catch (error) {
+  } catch(error) {
     res.status(400).json({
       isError: true,
       error,
     });
   }
 });
+
 app.get("/api/students/:search", async (req, res) => {
   try {
     courses.hasMany(students, { foreignkey: "courseID" });
@@ -68,6 +69,7 @@ app.post("/api/students", async (req, res) => {
 
 // U -> upsert
 app.put("/api/students/:id", async (req, res) => {
+ 
   try {
     const data = await students.upsert({
       id: req.params.id,
@@ -86,6 +88,24 @@ app.put("/api/students/:id", async (req, res) => {
 });
 
 // D -> destroy
+
+app.delete("/api/students/:id" , async (req,res)=>{
+  try{
+    await students.destroy({id : req.params.id}) ; 
+ res.status(200).json({
+  isError:false,
+   //we have to send sucess message 
+     data: "Destroied",
+ })
+  }catch{
+    res.status(400).json({
+      isError:true,
+      error ,
+    })
+  }
+}); 
+
+
 
 // Complete the courses CRUD
 app.post("/api/course", async (req, res) => {
@@ -107,6 +127,6 @@ app.post("/api/course", async (req, res) => {
 
 sequelize.sync().then(() => {
   app.listen(3001, () => {
-    console.log("Server Started");
+    console.log("Server Started at 3001");
   });
 });

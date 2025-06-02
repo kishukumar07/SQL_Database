@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Sourav@1999",
+    "password": "qwerty123nik",
     "database": "NxM301",
     "host": "localhost",
     "dialect": "mysql"
@@ -17,7 +17,7 @@
     "username": "root",
     "password": null,
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "127.0.0.1", 
     "dialect": "mysql"
   }
 }
