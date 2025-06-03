@@ -75,7 +75,64 @@ USING CHAT GPT FOR MOCK INTERVIEW ...
 
 
 ./prompt.md
+https://chatgpt.com/c/683efb01-8354-800c-a885-79d972131630
+
+
+Process >>>>>
+Take your own mock round to prepare for the upcoming company interview. Here's what it would look like: Student video, Student chatgpt conversation
+[Use ChatGPT on Microsoft Edge if you are on Windows]
+
+Install ChatGPT Voice Control extension – for Edge, for Chrome
+
+To record your video: Install Vimeo Recorder Extension Link on your Chrome (if you are using recording locally then upload video on Youtube as Unlisted)
+
+Ask ChatGPT to Start the interview
+
+Ask it to End the interview after 30-60 mins and Request the generation of a report once the interview is over
+
+Click the ChatGPT Primer link given by your instructor and Continue Conversation to take your interview
+
+Let me know when you're ready by saying: "Start taking interview".
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
