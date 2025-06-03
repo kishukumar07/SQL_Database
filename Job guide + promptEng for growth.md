@@ -72,8 +72,9 @@ Automate repetitive tasks and boost productivity for developers.
 USING CHAT GPT FOR MOCK INTERVIEW ...
 
 <!-- Reference chat -->
-chat.openai.com/share/27a11158-78cd-4a9d-b3a3-da3e59641679
 
+
+./prompt.md
 
 
 
