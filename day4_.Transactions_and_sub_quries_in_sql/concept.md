@@ -123,12 +123,23 @@ WHERE department_id = 1;
 --finally ... 
 =>> 
    SELECT *
-FROM employees e
+FROM employees 
 WHERE salary >= (
     SELECT AVG(salary)
     FROM employees
-    WHERE department = e.department
+    WHERE department_id = employees.department_id
 );
+
+
+<!-- we also want to show the department table TRY TO  JOIN  -->
+
+
+
+
+
+
+
+
 
 
 
