@@ -73,25 +73,157 @@ this should be known naturally but ofcourse you have to know these terms ACID Ru
  with  ref data.sql
 
 
--sub -Query ...> .... 
+-sub -Query ...> quries under queries (difficulty level  ).... 
 
 1. find those employees whose sallery is >=the average sallery of all employess ...
 =>>
 SELECT *
 FROM employees
-WHERE salary >= (SELECT AVG(salary) FROM employees);
+WHERE salary >= (SELECT AVG(salary) FROM employees);    
 
 Explanation:
 SELECT AVG(salary) FROM employees: Calculates the average salary.
 The outer query selects all employees whose salary is greater than or equal to that average.
 
 
-1. find those employees whose sallery is > the average sallery of all employess ... 
+2. find those employees whose sallery is > the average sallery of all employess... 
 =>>
 
 select * 
 from employess 
-where sallery > (select avg(sallery ) from employess)  ; 
+where sallery > (select avg(sallery ) from employess);
+
+3.Find those employees who has sallery ===max sallery; 
+ =>> 
+SELECT * 
+FROM employees 
+WHERE salary = (SELECT MAX(salary) FROM employees);     
+>there is only one output for this subquery so 
+>called as Scala-Sub-Query
+
+
+Hoping that basic sub query wla part is clear ...
+lets increase the difficulty level ... 
+
+
+1. find those employess whose sallery is > avg sallery of their own department . 
+
+--finding the avg sallery of a department... 
+      =>> 
+SELECT AVG(salary) AS average_salary
+FROM employees
+WHERE department_id = 1;
+
+>there is many  outputs(in table ) for this subquery so 
+>called as "Multi-Row-Sub-Query" ... 
+
+
+--finding the employee who has more sallery than that ...
+   =>>
+--finally ... 
+=>> 
+   SELECT *
+FROM employees e
+WHERE salary >= (
+    SELECT AVG(salary)
+    FROM employees
+    WHERE department = e.department
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
